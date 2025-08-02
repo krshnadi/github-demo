@@ -1,0 +1,113 @@
+Sequential execution: 
+    Execution of program line by line is called sequential execution.
+eg: WAP to calculate the area of a circle.
+
+Drawbacks of sequential programming is that it is suitable only for developing simple programs.
+
+Now if the programmer wants to repeat a group of statments then sequential programming is not suitable.
+In order to repeat a block of code, we need control statements that directly jump from one statement to another.
+
+The below are the control statements available in python:
+    1. if statement
+    2. if.. else statement
+    3. if.. elif.. else
+    4. while loop
+    5. for loop
+    6. else suitable
+    7. break statement
+    8. continue statement
+    9. pass statement
+    10. assert statement
+    11. return statement
+Python does not support switch statements that are available in other languages.
+
+1. If statement: 
+    syntax:
+        if (condition):
+            statement1
+            statement2
+            statement3
+            .
+            .
+            .
+            .
+            statementN
+eg: WAP to express digit in word.
+
+A word on Indentation: 
+    Indentation refers to the spaces that are used in the beginning of the statements.
+    For every ":" used in the program (be it control statements, functions, class etc), by default python (contd)
+    provides indentation of 4 spaces before every statement written after colon (:).
+
+2. if..else statemenst:
+        syntax:
+            if (condition):
+                statement1
+                statement2
+            else:
+                statement3
+                statement4
+eg: WAP to test whether a number is odd or even.
+
+3. if..elif..else:
+        syntax:
+            if (condition):
+                statement
+            elif (condition):
+                statement
+            else:
+                statement
+eg: WAP to know if a number is positive, negetive or zero
+
+NOTE to be written in BOLD and CAPITAL: 
+    x = input()
+    condition x > 0 or x < 0 => throws an error while compiling because we have used x variable and (contd)
+    assigned x with input(). By default input() returns string type. Now we have entered integer using (contd)
+    input(). Internally what is happening is there is a confusion in python interpreter i.e. python (contd)
+    interpreter is confused between assinged input() and entered value which is integer.(contd)
+    Now this x is compared with with integer which is not possible in python. In python, input() (contd)
+    by default data type is considered as STRING (str). In such cases we have to explicitly (contd)
+    typecast x as integer. This can be done by writing x = int(input()).
+
+Difference between Statements and Loops:
+    In python program, statements are executed only once from top to bottom. In order to repeat (contd)
+    execution multiple times, the program has to be executed multiple times. In order to avoid (contd)
+    executing multiple times there is a concept called LOOPS.
+Loops:
+    In order to repeat a particular set of statements in a program, we use loops. Loops are nothing (contd)
+    executing a particular block of statements in a program n no.of times. Different types of loops (contd)
+    available in python are:
+        (i) while
+        (ii) for
+        (iii) else suite
+
+4. while loop:
+        syntax:
+            while(condition):
+                statements
+    1. while loop is used in python to execute a group of statements several times repeatedly depending (contd)
+        on whether a condition is True or False.
+        Python interpreter first checks the condition, if the condition is True, the below statements (contd)
+        are executed. Once after the statements execution is completed, condition is again checked (contd)
+        and hence again the statements inside are executed. This execution takes place till the (contd)
+        condition is True, once the condition is False, execution stops and the statements are not (contd)
+        and the interpreter comes out of the While loop.
+        NOTE: While loop is mainly used in programs where the number of iterations are not known.
+    
+    eg: WAP to display numbers from 1 to 10 using while loop.
+
+5. for loop:
+    syntax:
+        for variable in sequence:
+            statements
+    for loop is used to iterate over the elements of a sequence i.e. for loop can be used to execute (contd)
+    a group of statements repeatedly depending on upon the number of elements in the sequence. for loop (contd)
+    can work with sequence like string (str), list, tuple, range etc.
+    NOTE: If the no.of iterations are known then we use for loop in python.
+eg: WAP to display characters of a string using for loop.
+
+Nested loops:
+It is possible to write one loop inside another loop. For eg. for loop inside a while loop, for loop (contd)
+inside a for loop etc. These loops inside another loop are called as Nested loops.
+eg: WAP to display stars in right angled triangular form using nested for loop.
+

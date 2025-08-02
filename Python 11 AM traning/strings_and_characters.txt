@@ -1,0 +1,158 @@
+String: A string is a group of characters. Strings are important because most of the characters that we use 
+in daily life are in the form of strings.
+eg: name, address etc.
+str data type in python represents string.
+We assign string to a variable in python by using "" or ''.
+eg: s1 = "Aditya" 
+s2 = 'Aditya'
+Both ways are used to define string in python.
+Length of the string:
+    This defines the no.of characters in the string. To know the length of the string we can use the len() function.
+    eg: s1 = "CORE PYTHON"
+        print(len(s1))
+        output: 11
+Indexing in strings:
+    Index represents the position number of character in the string. This is written using [].
+    By specifying the position number through an index, we can refer to the individual elements of string.
+    eg: s1 = "Core Python"
+        print(s1[0])
+        output: C
+        s1[0] represents the 1st element
+        s1[1] represents the 2nd element and so ....on.
+        s1[-1] represents the 1st element from last.
+        s1[-2] represents the 2nd element from last and so...on.
+        Hence we can make it a point that indexing can be done in both ways one is from starting elements 
+        of the string which is called Forward or positive indexing or the other way is to extract elements
+        from reverse which is called Reverse or negetive indexing.
+    eg: WAP to access each element of the string in forward and reverse order using while loop. 
+String slicing:
+    A slice represents part or piece of a string. 
+        Syntax:
+            stringname [start: stop: stepsize]
+        If start and stop are not specified, then slicing is done from 0th to n-1 elements.
+        If the stepsize is not written, then it is taken as 1.
+    eg: str = 'Core Python'
+        str[0:10:1]
+Repeating of strings:
+    The repeatation operator is denoted by '*' symbol and is useful to repeat the string for several times.
+    eg: str = 'Core Python'
+        print(str * 2)
+        s = str[0: 1]*2
+        output = CoCo
+String concatenation:
+    We can use '+' symbol to attach a string at the end of another string. 
+    '+' is called addition operator and is used with numbers.
+    When '+' is used on strings it is called "Concatenation".
+    eg: s1 = "Core"
+        s2 = 'Python'
+
+Checking Membership:
+    We can check if a string or character is a member of another string or not using 'in' and (contd)
+    'not in' operators. The 'in' operator returns True if the string or character is found in the (contd)
+    main string. It returns False if the string or character is not found in the main string.
+    eg: WAP to know whether a sub string exists in main string or not.
+
+Comparing string:
+    We can use rational operators such as <=, >=, >, <, == or != to compare strings. They return True (contd)
+    or False depending on the string being compared.
+    eg:
+    s1 = "box"
+    s2 = "boy"
+    if s1 == s2:
+        print("Both are same.")
+    else:
+        print("Both are not same.")
+
+Removing spaces from string:
+    A space is considered as a character inside a string.
+    Sometimes unnecessary spaces inside a string will lead to wrong results.
+    Hence there are methods using which unnecessary spaces can be removed from string.
+    lstrip(): Removes spaces from right side of the string.
+    rstrip(): Removes spaces from left side of the string.
+    strip(): Removes spaces from both sides of the string.
+
+Counting substrings in a string:
+    count() method is available to count the no.of occurances of a sub-string in main string.
+    This returns an integer number that represents how many times the substring is found in the main string.
+    We can limit our search by specifying beginning and ending positions in the count() method so that 
+    the substring position is counted only in that range.
+    Syntax:
+        stringname.count(substring) or stringname.count(substring, beg, end)
+    eg: s1 = "New Delhi"
+        n = s1.count(e)
+        print(n)
+        Output => 2
+
+Stings are Immutable:
+    An Immutable object is an object whose content cannot be changed.
+    On the other hand, Mutable object is an object whose content can be changed as and when required.
+    Immutable data types - Numbers, strings, Tuples
+    Mutable data types - Lists, sets, dictionaries
+    Reason why strings are made Immutable in Python:
+        1. Performance:
+            When an object is Immutable, it will have fixed size in memory since it cannot be modified.
+            Being mutable, we can allocate memory space for them at creation time, and the storage 
+            requirements are fixed and unchanging.
+            Hence, it takes less time to allocate memory for strings and less time to access them increasing
+            performace of software.
+        2. Security:
+            Since string objects are immutable, any attempts to modify the existing string object will create
+            a new object in memory.
+            Thus the identity number of the new object will change that lets the programmer to understand 
+            that somebody modified the original string.
+            This is useful to enforce security where strings can be transported from one application to 
+            another application without modifications.
+        Refer to the example shown in str_and_char.py to have clear understanding.
+
+Replacing string with another string:
+    replace() method is used to replace a sub string in a string with another sub string.
+    Syntax:
+        stringname.replace(old, new)
+    eg: str = 'This is a beautiful flower.'
+        str1 = str.replace('flower', 'rose')
+    Note: When using replace method make sure to use "" or '' for old, new string.
+
+Spitting and Joining strings:
+    The split() method is used to brake a string into pieces. These pieces are returned as Lists.
+    Syntax:
+        str.split(separator) *Here separator can be , space, colon, semi-colon etc...
+    eg: str = 'one, two, three, four'
+        str1 = str.split(',')
+    The join() method is used to join the substrings into single string with or without using seperator.
+    Syntax:
+        separator.join(str) 
+    eg: str = ('One', 'Two', 'Three')
+        str1 = '-'.join(str)
+
+Changing Case of a string:
+    upper() : Used to convert all the characters of a string to UPPER case.
+    lower() : Used to convert all the characters of a string to lower case.
+    swapcase() : Converts small letters to CAPITAL and CAPITAL to small case.
+    title() : Converts the string such as each word in the string will start with a capital letter and 
+    remaining will be small letters.
+    
+Checking starting and ending of a string:
+    startswith():
+        The startwith() method is useful to know whether a string is starting with a substring or not.
+        Output of this method will be Boolean i.e. True or False.
+        Syntax:
+            str.startswith(substring)
+        eg: str = 'This is Python.'
+            print(str.startswith('This'))
+    endswith():
+        To check the ending of a string, we can use endswith() method. 
+        Output of this method will be Bool type i.e. True or False.
+        Syntax:
+            str.endswith(substring)
+        eg: str = 'This is Python.'
+            print(str.endswith('Python'))
+
+String Testing Methods:
+    isalnum() : Returns True if all the characters iin the string are alphanumeric otherwise False.
+    isapha() : Returns True if the string has atleast one char and all char are Alphabetic, otherwise returns False.
+    isdigit() : Returns True if the string has only numeric digits, otherwise False.
+    islower() : Returns True if the string has atleast one letter and all char are lower case, otherwise False.
+    isupper() : Returns True if the string has atleast one letter and all char are Upper case, otherwise False.
+    istitle() : Returns True if the string has each word starting with a capital letter, otherwise False.
+    isspace() : Returns True if the string has only spaces, otherwise False.
+    

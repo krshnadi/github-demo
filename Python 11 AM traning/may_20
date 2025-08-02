@@ -1,0 +1,38 @@
+# for i in range(1,5):
+#     print("Iteration - ",i)
+
+# users = ["a", "b", "c", "d", "e"]
+# print(users)
+# for i in users:
+#     print(i )
+
+# print ("Next line")
+
+
+# for i in range(0,5):
+#     print(users[i])
+
+
+# temp_data = [
+#   {"id": 1, "name": "Alice", "email": "alice@example.com"},
+#   {"id": 2, "name": "Bob",   "email": "bob@example.com"}
+# ]
+# for i in range(0,2):
+#     print(f"user id : {temp_data[i]['id']}")
+#     print(f"user name : {temp_data[i]['name']}")
+#     print(f"user email : {temp_data[i]['email']}")
+
+
+def cal_gst (price):
+    gst = (price * 18)/100
+    final_price = price + gst
+    print("The final product price including GST is ", final_price)
+    return final_price
+
+cal_gst(1000)
+
+cal_gst(1500)
+
+apply_gst = lambda price: price + (price * 18) / 100
+final_price = apply_gst(1000)
+print ("Final Price : ", final_price)

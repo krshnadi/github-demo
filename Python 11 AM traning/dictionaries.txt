@@ -1,0 +1,65 @@
+Dictionary:
+    A dictionary represents a group of elements arranged in the form of key-value pairs.
+    First element is considered as 'key' and immediate next element is considered as 'value'
+    key and value are separated by ':' i.e. key : value
+    Dictionary is denoted with {} or using dict().
+    Syntax:
+        dict = {'key1':value1, 'key2':value2,.......,'keyN':valueN}
+    When key is provided we can get back the value.
+    eg: dict = {'Name':'Aditya','Age':35,'City':'Hyderabad'}
+        print("The length of the dictionary 'dict' is:", len(dict))
+        print("The above dict is of type:", type(dict))
+        print("The address of the Dictionary 'dict' is:", id(dict))
+
+Operations on Dictionaries:
+    To access elements of dictionary, we should not use indexing or slicing.
+    eg: To access 'Name' value from above eg, we should not use dict[0] or dict[1] etc. 
+        Trying to access elements by indexing gives error.
+    To access the value associated with a key, we can mention key name inside the square braces.
+    eg: print(dict['Name'])
+        print(dict['Age'])
+        print(dict['City'])
+
+Modify elements of Dictionary:
+    We can modify eht existing value of a key by assigning a new value.
+    eg: dict['City'] = 'Bengaluru'
+
+Inserting the new key:value pair in dictionary:
+    We can insert a new key:value pair in existing dictionary by using the below way:
+    eg: dict['Mobile'] = 9618114253
+
+Deleting key:value pair:
+    We can delete the key and its corresponding values from the dictionary.
+    eg: del dict['Mobile']
+    print(dict)
+
+Membership operations:
+    We can check whether the 'key' is available in dictionary or not by using Membership operators in python.
+    * Please refer to the eg mentioned in dict.py
+
+Rules to be followed in creating Dictionary:
+    We can use any datatype for values i.e. strings, list, tuple, or another dictionary. Certain rules should be obeyed:
+        Keys should be unique that means, duplicate keys are not allowed. If we enter a new key again, the old key value 
+        is overwritten.
+        Keys should be immutable. We can use a number, string and tuple but cannot use lists or dictionaries. If we try 
+        to use mutable keys, then we will get 'TypeError'.
+
+Dictionary Methods:
+    Various methods are provided to process the elements of a dictionary. These methods retrieve and manipulate the 
+    contents of a dictionary.
+    clear()         :   d.clear()               :   Removes all key:value pairs from dictionary 'd'   
+    copy()          :   d1=d.copy()             :   copies all elements from 'd' into a new dict 'd1'
+    fromkeys()      :   d.fromkeys(s[,v])       :   create a new dictionary with keys from seq 's' and values all set to 'v'
+    get()           :   d.get(k[,v])            :   Returns the value associated with key 'k'. If key is not found, it returns 'v'
+    items()         :   d.items()               :   Return an object that contains key:value pair of 'd' and pairs are stored as tuples
+    keys()          :   d.keys()                :   Returns a seq of keys from the dictionary 'd'
+    values()        :   d.values()              :   Returns a seq of values from the dictionary 'd'
+    update()        :   d.update(x)             :   Adds all elements from dictionary 'x' to 'd'
+    pop()           :   d.pop(k[,v])            :   Removes the key 'k' and its value from 'd' and returns the value. If key is not
+                                                    found then the value 'v' is returned. If key is not found and 'v' is not 
+                                                    mentioned then 'KeyError' is raised.
+    setdefault()    :   d.setdefault(k,[,v])    :   If key 'k' is found, its value is returned. If key is not found then k, v pair is
+                                                    stored into the dictionary 'd'
+    *Please refer to the eg mentioned in dict.py for better understanding.
+
+

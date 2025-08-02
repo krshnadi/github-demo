@@ -1,0 +1,143 @@
+Sequence: 
+    A sequence is a datatype that represents a group of elements.
+    Purpose of sequence is to store and process a group of elements.
+    String, Lists, Tuples and Dictionary are very important sequence datatypes in Python.
+
+List: 
+    A list is similar to that of an array that consists of a group of elements or items.
+    List stores elements just like array.
+    Difference between List and Array is that, array stores only one type of elements whereas a list can store 
+    different types of elements.
+    Lists are more versatile and useful than an array and Lists are the most used datatypes in python.
+
+Denotion: 
+    List datatypes are denoted with [] (square bracket).
+    eg: student = [10, aditya, M, 26, May, 1990]
+
+Creating lists using range():
+    eg: refer to the example mentioned in lst_and_tuple.py.
+
+Updating elements of a List:
+    Lists are Mutable meaning we can modify the contents of a list. We can append(), update(), delete() elements of a 
+    list as per our requirements.
+    eg:
+    lst = list(range(10))
+    print(lst)
+    lst.append(9) => append the new element to the list.
+    print(lst)
+    Updating the value means changing the value of the element in the list. This is done by accessing the specific element
+    indexing or slicing and assigning a new value.
+    lst[1] = 8
+    print(lst)
+    lst[1:3] = 10, 11
+    print(lst)
+    Deleting an element from list can be done by using del statement.
+    del lst[1]
+    print(lst)
+    we can also delete the element using the remove() method. In this method we need to pass the element to be deleted.
+    lst.remove(11)
+    print(lst)
+    list.reverse()
+    lst1 = [1,3,5,7,9]
+    lst2 = lst1.reverse(lst1)
+
+List concatenation:
+    We can use '+' operator on two lists to join them. 
+    eg:
+    x = [10, 20, 30, 40, 50]
+    y = [5, 15, 25, 35, 45]
+    print(x+y)
+
+Repeatation of Lists:
+    We can repeat elements of a list n no.of times using '*' operator.
+    eg:
+    x = [10, 20, 30, 40, 50]
+    print(x * 2)
+
+Membership in Lists:
+    We can check if an elements is a member of list or not by using 'in' and 'not in' operator.
+    If the element is a member of the list, then 'in' operator returns True else False.
+    If the element is not in the list, then 'not in' operator returns True else False.
+    eg:
+    x = [1, 2, 3, 4, 5,]
+    y = 2
+    z = 6
+    print(y in x)
+    print(z not in x)
+
+Copy():
+    Using copy(), we can copy existing list to another list. The advantage of copy() is that, when ever we modify actual list,
+    the copied list does not does not get modified.
+    For eg. we have a lists a = [1,2,3,4,5]. now if we assign this list to new variable i.e. b = a.
+    A new list b is created which consists of all the elements of list a.
+    Any modification done on list a will reflect on list b also.
+    eg: 
+    a = [1,2,3,4,5]
+    b = a
+    a.append(6)
+    print(a)
+    print(b)
+    x = [1, 2, 3, 4, 5,]
+    y = x.copy()
+
+Methods to Process Lists:
+    sum()       :   list.sum()          :   Returns sum of all elements in the list.
+    index()     :   list.index(x)       :   Returns the first occurance of x in the list.
+    append()    :   list.append(x)      :   Appends x at the end of the list.
+    insert()    :   list.insert(i,x)    :   inserts x in to the list in the position specified by i.
+    copy()      :   list.copy()         :   Copies all the list elements into a new list and returns it.
+    extend()    :   list.extend(list1)  :   Appends list1 to list.
+    count()     :   list.count(x)       :   Returns number of occurrences of x in the list.
+    remove()    :   list.remove(x)      :   Removes x from the list.
+    pop()       :   list.pop()          :   Removes the ending element from the list.
+    sort()      :   list.sort()         :   Sorts the elements of the list into ascending order.
+    reverse()   :   list.reverse()      :   Reverses the sequence of elements in the list.
+    clear()     :   list.clear()        :   Deletes all the elements from the list.
+    eg: Please refer to the program to clearly understand on the list preceedings.
+
+Min and max of a list:
+    min(lst)
+    max(lst)
+
+Sorting the list elements:
+    x.sort()
+    x.sort(reverse=True)
+==========================================="END OF LISTS========================================================
+
+Tuples:
+    Denoted by ().
+    A tuple is a python sequence which stroes a group of elements or items.
+    Tuples are Immutable i.e. once we create a tuple we cannot modify its elements.
+    Hence append(), extend(), insert(), remove(), pop(), clear() cannot be performed on tuples.
+    Tuples are used to store data that should not be modified and retrieve that data on demand.
+
+Creating Tuples:
+    tup1 = ()
+    tup2 = (10, 20, 30, 'Hyderabad')
+    tup3 = 1,2,3,4
+    If () are not present for tuples then by default that data type is considered as tuple.
+
+Creating tuple from list:
+    lst1 = [1,2,3,4]
+    tpl = tuple(lst1)
+
+Basic operations on Tuples:
+    The opeations that can be performed on tuples are as mentioned below:
+    finding length  :   We can use len() to get the no.of elements in the tuple.
+    concatenation   :   We can concatenate or join 2 tuples and store the result in the new tuple.
+    repetation      :   eg: fees = (25000) * 4 => output = (25000, 25000, 25000, 25000)
+    membership      :   This can be done by using 'in' and 'not in' operator.
+    iteration       :   This can be done using while, for loops.
+*Please refer to the detailed example mentioned in lst_and_tuple.py.
+
+Functions to Process Tuples:
+    There are few functions in python to perform some important operations on Tuples.
+    Out of all of them, count() and index() are not functions but they are called Methods.
+    len()       :   len(tpl)    :   Returns the no.of elements in the tuple.
+    min()       :   min(tpl)    :   Returns the smallest element in the tuple.
+    max()       :   max(tpl)    :   Returns the biggest element in the tuple.
+    count()     :   tpl.count() :   Returns how many times the element 'x' is found in tpl.
+    index()     :   tpl.index() :   Returns the first occurance of the element 'x' in tuple otherwise 'ValueError' if not found.
+    sorted()    :   sorted(tpl) :   Sorts the elements of the tuple into ascending order. sorted(reverse=True) will sort in 
+                                    reverse order.
+*Please refer to the example mentioned in lst_and_tuple.py.
